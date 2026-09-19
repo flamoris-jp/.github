@@ -13,7 +13,7 @@ We explore new ways for humans and AI to create together across illustration, an
   Lightweight image cutout, repair, mask, and part-editing tools.
 
 - **FLAMORIS Kachinco**  
-  AI-native video editing and compositing.
+  AI-native video editing and compositing. The name *Kachinco* comes from the Japanese word for a film clapperboard, the tool used to mark the start of a take.
 
 More shared infrastructure, research projects, and creative tools are under development.
 
