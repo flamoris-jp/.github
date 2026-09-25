@@ -64,15 +64,11 @@ def validate_property_schema(org: str, property_name: str, token: str) -> None:
             f"{property_name!r} must be an organization single_select custom property"
         )
 
-    allowed = schema.get("allowed_values")
-    allowed_values = set(allowed) if isinstance(allowed, list) else set()
-    required_values = set(STATUS_ORDER[:-1])
-    missing = sorted(required_values - allowed_values)
-    if missing:
-        raise RuntimeError(
-            f"{property_name!r} is missing required allowed values: "
-            + ", ".join(missing)
-        )
+    # Do not validate allowed_values here. The organization settings UI is the
+    # source of truth for the option list, while the sync only needs the property
+    # to exist and be a single-select. Repository values are normalized below,
+    # and anything unexpected is rendered as "unspecified" rather than blocking
+    # the entire profile refresh.
 
 
 def public_repository_names(org: str, token: str) -> set[str]:
