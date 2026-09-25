@@ -52,6 +52,29 @@ def get_paginated(path: str, token: str) -> list[dict[str, Any]]:
         page += 1
 
 
+def validate_property_schema(org: str, property_name: str, token: str) -> None:
+    org_path = urllib.parse.quote(org, safe="")
+    property_path = urllib.parse.quote(property_name, safe="")
+    schema = github_get(
+        f"/orgs/{org_path}/properties/schema/{property_path}",
+        token,
+    )
+    if schema.get("value_type") != "single_select":
+        raise RuntimeError(
+            f"{property_name!r} must be an organization single_select custom property"
+        )
+
+    allowed = schema.get("allowed_values")
+    allowed_values = set(allowed) if isinstance(allowed, list) else set()
+    required_values = set(STATUS_ORDER[:-1])
+    missing = sorted(required_values - allowed_values)
+    if missing:
+        raise RuntimeError(
+            f"{property_name!r} is missing required allowed values: "
+            + ", ".join(missing)
+        )
+
+
 def public_repository_names(org: str, token: str) -> set[str]:
     org_path = urllib.parse.quote(org, safe="")
     repositories = get_paginated(
@@ -166,6 +189,7 @@ def main() -> int:
         os.environ.get("FLAMORIS_PROFILE_README", "profile/README.md")
     )
 
+    validate_property_schema(org, property_name, token)
     public_names = public_repository_names(org, token)
     statuses = development_statuses(org, property_name, token, public_names)
     rendered = render_status_block(org, property_name, statuses)
