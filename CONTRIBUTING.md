@@ -2,7 +2,7 @@
 
 Thank you for your interest in FLAMORIS.
 
-Small fixes may be submitted directly as pull requests. For larger features, architecture changes, or cross-repository work, please open an Issue first so the intended boundary can be discussed before implementation.
+Issues are welcome from everyone. Pull requests are accepted only from repository collaborators. If you would like to propose a fix, feature, documentation change, architecture change, or cross-repository work, please open an Issue so the intended boundary can be discussed before implementation.
 
 Please keep changes focused, include or update tests where practical, avoid unnecessary dependencies, and document externally visible behavior.
 
@@ -20,7 +20,7 @@ FLAMORIS does not provide guaranteed individual support. Please use the reposito
 
 FLAMORISに興味を持っていただきありがとうございます。
 
-小さな修正は、そのままPull Requestを送っていただいて構いません。大きな機能追加、アーキテクチャ変更、複数リポジトリにまたがる変更は、実装前にIssueで意図や境界を相談してください。
+Issueはどなたでも歓迎します。Pull Requestはリポジトリのcollaboratorのみ受け付けています。修正、機能追加、ドキュメント変更、アーキテクチャ変更、複数リポジトリにまたがる提案は、Issueからお願いします。
 
 変更範囲を絞り、可能な範囲でテストを追加・更新し、不要な依存関係を増やさず、外部から見える挙動は文書化してください。
 
