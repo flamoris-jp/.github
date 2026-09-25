@@ -1,22 +1,18 @@
-# FLAMORIS AI Research Lab
+# FLAMORIS
 
-FLAMORIS develops open-source creative tools and AI-native production software.
+**Creative tools for humans and AI with too many ideas.** 🥸
 
-We explore new ways for humans and AI to create together across illustration, animation, video, audio, and creative workflows.
+FLAMORIS is an open-source creative ecosystem spanning illustration, animation, video, generative media, AI agents, and the infrastructure that connects them.
 
-## Projects
+We build tools where humans and AI can work in the same creative space, while keeping product state, permissions, and authorship understandable.
 
-- **FLAMORIS 2D**  
-  AI-native 2D animation and character authoring.
+## What we build
 
-- **FLAMORIS Cutwork**  
-  Lightweight image cutout, repair, mask, and part-editing tools.
+- 🎨 **Creative applications** — 2D animation, image decomposition and repair, video editing, compositing, and production tools.
+- 🤖 **AI & generation** — generative media, AI agents, intelligence gateways, and creative automation.
+- 🔌 **Shared infrastructure** — MCP, logging, Studio, runtime coordination, and the small pieces that keep everything talking to everything else.
 
-- **FLAMORIS Kachinco**  
-  AI-native video editing and compositing. The name *Kachinco* comes from the Japanese word for a film clapperboard, the tool used to mark the start of a take.
-
-More shared infrastructure, research projects, and creative tools are under development.
-
+> Creating strange and beautiful things with humans, AI, and too many ideas.
 
 ## Development status / 開発ステータス
 
@@ -28,29 +24,63 @@ _Status is synchronized automatically from the `development_status` organization
 | `meta` | [.github](https://github.com/flamoris-jp/.github) |
 <!-- development-status:end -->
 
-> Creating strange and beautiful things with humans, AI, and too many ideas.
+## Use it however you like 🥸
+<sub>Within the terms of the Apache License 2.0.</sub>
+
+Modify it, build it into something else, or use it to make something interesting or strange 🤣🤣
+
+Commercial use is welcome too 👍  
+You do not need our permission.  
+If you feel like telling us what you made with FLAMORIS, we'd be happy to hear about it.  
+Completely optional.
+
+FLAMORIS software is provided as-is.  
+There is no guaranteed individual support or warranty.
+
+If you run into trouble, let your AI assistant read the README, documentation, Issues, and source code and help you work it out 👹
+
+If FLAMORIS helps you, or you simply find it interesting, support for development is always appreciated.  
+It helps FLAMORIS keep growing. 🌱  
+<sub>Mostly GPU bills and things like that.</sub>
+
+> Characters, illustrations, music, video, and other creative works by **artist FLAMORIS** are not necessarily covered by the Apache License 2.0.
 
 ---
 
-# FLAMORIS AI研究所
+# FLAMORIS
 
-FLAMORISでは、オープンソースのクリエイティブツールと、
-AIネイティブな制作環境を開発しています。
+**人とAIと、ちょっと多すぎるアイデアのための制作環境。** 🥸
 
-イラスト、アニメーション、映像、音楽、制作ワークフローを横断しながら、
-人とAIが一緒に作品をつくるための新しい方法を研究・開発しています。
+FLAMORISでは、イラスト、アニメーション、映像、生成AI、AIエージェント、そしてそれらをつなぐ基盤まで、オープンソースのクリエイティブツールを作っています。
 
-## Projects
+人とAIが同じ制作空間で一緒に作りながらも、作品の状態や権限、誰が何を作ったのかが分からなくならない仕組みを目指しています。
 
-- **FLAMORIS 2D**  
-  AIネイティブな2Dアニメーション・キャラクター制作ツール
+## つくっているもの
 
-- **FLAMORIS Cutwork**  
-  切り抜き、修復、マスク、パーツ編集のための軽量画像編集ツール
-
-- **FLAMORIS Kachinco**  
-  AIネイティブな動画編集・コンポジットツール
-
-共通基盤、AI研究、制作支援ツールなども順次開発しています。
+- 🎨 **制作アプリ** — 2Dアニメーション、画像の切り抜き・修復、動画編集、コンポジット、制作ツール。
+- 🤖 **AI・生成系** — 画像・動画・音楽・音声などの生成、AIエージェント、知能系ゲートウェイ、制作自動化。
+- 🔌 **共通基盤** — MCP、Logging、Studio、runtime連携、そして全部をつなぐ小さな仕組みたち。
 
 > 人とAIと、ちょっと多すぎるアイデアで、変で美しいものをつくる。
+
+## 勝手に使ってください🥸
+<sub>※ Apache License 2.0 の範囲で</sub>
+
+改造しても、組み込んでも、面白いものや変なものを作ってもOKです🤣🤣
+
+商用作品や製品で使う場合も、許可は不要です👍  
+もしよければ「こんなのに使ったよ」と教えてもらえるとうれしいです。  
+もちろん強制ではありません。
+
+FLAMORISのソフトウェアは現状のまま提供されます。  
+個別サポートや動作保証はありません。
+
+困ったときは、README、ドキュメント、Issue、ソースコードをあなたのAIに読ませて、自己サポートしてもらってください👹
+
+もし、あなたのお役に立てたり、面白いと思っていただけたなら、  
+開発費用をご支援いただけるとうれしいです。  
+FLAMORISは元気になって育ちます。🌱  
+<sub>主にGPU代とか。</sub>
+
+> ソフトウェアコード以外の、キャラクター、イラスト、音楽、映像などの  
+> **アーティスト FLAMORISの制作物**は、Apache License 2.0の対象とは限りません。
