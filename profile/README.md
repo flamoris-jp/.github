@@ -21,7 +21,11 @@ More shared infrastructure, research projects, and creative tools are under deve
 ## Development status / 開発ステータス
 
 <!-- development-status:start -->
-_Status is synchronized automatically from the `development_status` organization custom property for public repositories._
+_Status is synchronized automatically from the `development_status` organization custom property. Public repositories only._
+
+| Status | Repositories |
+|---|---|
+| `meta` | [.github](https://github.com/flamoris-jp/.github) |
 <!-- development-status:end -->
 
 > Creating strange and beautiful things with humans, AI, and too many ideas.
