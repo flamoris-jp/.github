@@ -41,6 +41,7 @@ If you run into trouble, let your AI assistant read the README, documentation, I
 
 If FLAMORIS helps you, or you simply find it interesting, support for development is always appreciated.  
 It helps FLAMORIS keep growing. 🌱  
+[💖 Sponsor FLAMORIS](https://github.com/sponsors/flamoris-jp)  
 <sub>Mostly GPU bills and things like that.</sub>
 
 > Characters, illustrations, music, video, and other creative works by **artist FLAMORIS** are not necessarily covered by the Apache License 2.0.
@@ -80,6 +81,7 @@ FLAMORISのソフトウェアは現状のまま提供されます。
 もし、あなたのお役に立てたり、面白いと思っていただけたなら、  
 開発費用をご支援いただけるとうれしいです。  
 FLAMORISは元気になって育ちます。🌱  
+[💖 FLAMORISを支援する](https://github.com/sponsors/flamoris-jp)  
 <sub>主にGPU代とか。</sub>
 
 > ソフトウェアコード以外の、キャラクター、イラスト、音楽、映像などの  
