@@ -7,10 +7,14 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: development-status-sync
   cancel-in-progress: true
+
+env:
+  STATUS_SYNC_BRANCH: automation/development-status-sync
 
 jobs:
   sync:
@@ -18,6 +22,8 @@ jobs:
     steps:
       - name: Check out organization profile
         uses: actions/checkout@v7
+        with:
+          ref: main
 
       - name: Generate development status
         env:
@@ -27,18 +33,56 @@ jobs:
           FLAMORIS_PROFILE_README: profile/README.md
         run: python3 scripts/sync-development-status.py
 
-      - name: Commit profile change
+      - name: Publish profile change through pull request
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
 
+          open_pr_number="$(
+            gh pr list \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head "$STATUS_SYNC_BRANCH" \
+              --state open \
+              --json number \
+              --jq '.[0].number // empty'
+          )"
+
           if git diff --quiet -- profile/README.md; then
             echo "Development status is already up to date."
+
+            if [[ -n "$open_pr_number" ]]; then
+              gh pr close "$open_pr_number" \
+                --repo "$GITHUB_REPOSITORY" \
+                --comment "Closing this generated PR because the current development status is already present on main."
+            fi
+
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$STATUS_SYNC_BRANCH"
           git add profile/README.md
           git commit -m "docs: sync development status"
-          git push
+
+          # This branch is owned exclusively by this workflow. Rebuilding it
+          # from current main on each run prevents stale generated history and
+          # lets one open PR be reused without ever pushing to protected main.
+          git push --force origin "HEAD:refs/heads/$STATUS_SYNC_BRANCH"
+
+          if [[ -n "$open_pr_number" ]]; then
+            echo "Updated development status PR #$open_pr_number."
+            exit 0
+          fi
+
+          gh pr create \
+            --repo "$GITHUB_REPOSITORY" \
+            --base main \
+            --head "$STATUS_SYNC_BRANCH" \
+            --title "docs: sync development status" \
+            --body "Automated update of the organization development-status table.
+
+          This pull request is maintained by the **Sync development status** workflow. Repeated scheduled runs update this same branch/PR instead of pushing directly to protected main."
