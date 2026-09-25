@@ -1,0 +1,44 @@
+name: Sync development status
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: development-status-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out organization profile
+        uses: actions/checkout@v7
+
+      - name: Generate development status
+        env:
+          FLAMORIS_CUSTOM_PROPERTIES_TOKEN: ${{ secrets.FLAMORIS_CUSTOM_PROPERTIES_TOKEN }}
+          FLAMORIS_ORG: flamoris-jp
+          FLAMORIS_DEVELOPMENT_STATUS_PROPERTY: development_status
+          FLAMORIS_PROFILE_README: profile/README.md
+        run: python3 scripts/sync-development-status.py
+
+      - name: Commit profile change
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- profile/README.md; then
+            echo "Development status is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/README.md
+          git commit -m "docs: sync development status"
+          git push
