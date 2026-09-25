@@ -17,6 +17,13 @@ We explore new ways for humans and AI to create together across illustration, an
 
 More shared infrastructure, research projects, and creative tools are under development.
 
+
+## Development status / 開発ステータス
+
+<!-- development-status:start -->
+_Status is synchronized automatically from the `development_status` organization custom property for public repositories._
+<!-- development-status:end -->
+
 > Creating strange and beautiful things with humans, AI, and too many ideas.
 
 ---
