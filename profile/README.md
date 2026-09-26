@@ -22,8 +22,8 @@ _Status is synchronized automatically from the `development_status` organization
 | Status | Repositories |
 |---|---|
 | `stable` | [flamoris-logging](https://github.com/flamoris-jp/flamoris-logging), [flamoris-mcp-core](https://github.com/flamoris-jp/flamoris-mcp-core) |
-| `development` | [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D), [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent), [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork), [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp), [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco), [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub), [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) |
-| `planned` | [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp), [flamoris-studio-client](https://github.com/flamoris-jp/flamoris-studio-client) |
+| `development` | [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D), [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent), [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork), [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp), [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager), [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp), [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco), [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub), [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) |
+| `planned` | [flamoris-studio-client](https://github.com/flamoris-jp/flamoris-studio-client) |
 | `meta` | [.github](https://github.com/flamoris-jp/.github), [flamoris-ai](https://github.com/flamoris-jp/flamoris-ai), [flamoris-commons](https://github.com/flamoris-jp/flamoris-commons) |
 <!-- development-status:end -->
 
