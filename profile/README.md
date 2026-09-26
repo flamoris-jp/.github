@@ -12,6 +12,19 @@ We build tools where humans and AI can work in the same creative space, while ke
 - 🤖 **AI & generation** — generative media, AI agents, intelligence gateways, and creative automation.
 - 🔌 **Shared infrastructure** — MCP, logging, Studio, runtime coordination, and the small pieces that keep everything talking to everything else.
 
+## AI & runtime map
+
+The current non-desktop AI/runtime side is split by authority rather than by machine name:
+
+- 🧪 [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) — generative-media workflows, jobs, providers, and assets.
+- 🧠 [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) — provider-neutral language, reasoning, and coding gateway.
+- 🌱 [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) — persistent Agent state and bounded Agent MCP surface.
+- 🎛️ [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) — multi-user web creative control plane.
+- 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation and routing.
+- 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutral local GPU/runtime lifecycle authority.
+
+Machine names such as **LIME** are deployment identities, not public service identities.
+
 > Creating strange and beautiful things with humans, AI, and too many ideas.
 
 ## Development status / 開発ステータス
