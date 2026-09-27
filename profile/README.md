@@ -107,7 +107,8 @@ Machine names such as **LIME** are deployment identities, not public service ide
 
 ## Development status / 開発ステータス
 
-_Maintained manually. Public repositories only._
+<!-- development-status:start -->
+_Status is synchronized automatically from the `development_status` organization custom property. Public repositories only._
 
 | Status | Repositories |
 |---|---|
@@ -115,6 +116,7 @@ _Maintained manually. Public repositories only._
 | `development` | [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D), [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent), [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime), [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork), [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp), [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager), [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp), [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco), [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub), [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) |
 | `planned` | [flamoris-studio-client](https://github.com/flamoris-jp/flamoris-studio-client), [Oblivionis](https://github.com/flamoris-jp/Oblivionis) |
 | `meta` | [.github](https://github.com/flamoris-jp/.github), [flamoris-ai](https://github.com/flamoris-jp/flamoris-ai), [flamoris-commons](https://github.com/flamoris-jp/flamoris-commons) |
+<!-- development-status:end -->
 
 ## Use it however you like 🥸
 <sub>Within the terms of the Apache License 2.0.</sub>
