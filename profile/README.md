@@ -36,6 +36,8 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
 | Repository | Role |
 |---|---|
 | [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) | Persistent FLAMORIS-aware Agent with conversations, memory, knowledge, prompts, and tools. |
+| [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) | Model-adjacent execution runtime for inference, workflows, jobs, interrupts, capabilities, and real-time traces. |
+| [Oblivionis](https://github.com/flamoris-jp/Oblivionis) | Experimental non-LLM dynamic state and memory model built around oscillation, forgetting, association, recall, and evolving internal state. |
 | [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) | Provider-neutral MCP gateway for language, reasoning, and coding AI. |
 | [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) | Provider-neutral generative-media gateway for image, video, music, voice, and related media workflows. |
 
@@ -68,8 +70,9 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
         │                │                │
         ▼                ▼                ▼
  🎨 Creative Apps    🎛️ Studio        🤖 AI
- 2D / Cutwork       Studio / Client   Agent
- Kachinco                              Intelligence MCP
+ 2D / Cutwork       Studio / Client   Agent / AI Runtime
+ Kachinco                              Oblivionis
+                                      Intelligence MCP
                                       Generation MCP
         │                │                │
         └────────────────┼────────────────┘
@@ -92,6 +95,8 @@ The current non-desktop AI/runtime side is split by authority rather than by mac
 - 🧪 [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) — generative-media workflows, jobs, providers, and assets.
 - 🧠 [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) — provider-neutral language, reasoning, and coding gateway.
 - 🌱 [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) — persistent Agent state and bounded Agent MCP surface.
+- ⚙️ [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) — model-adjacent inference/workflow execution, jobs, interrupts, capabilities, and structured runtime events.
+- 🌘 [Oblivionis](https://github.com/flamoris-jp/Oblivionis) — experimental non-LLM dynamic state and memory model; intentionally keeps an independent model identity while remaining callable from FLAMORIS AI Runtime.
 - 🎛️ [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) — multi-user web creative control plane.
 - 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation and routing.
 - 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutral local GPU/runtime lifecycle authority.
@@ -175,6 +180,8 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
 | Repository | 役割 |
 |---|---|
 | [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) | Conversation・Memory・Knowledge・Prompt・Toolを持つ永続的なFLAMORIS Agent。 |
+| [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) | 推論・Workflow・Job・割り込み・Capability・リアルタイム観測を同じ実行層で扱うmodel-adjacent AI Runtime。 |
+| [Oblivionis](https://github.com/flamoris-jp/Oblivionis) | 振動・忘却・連想・想起と時間変化する内部状態を扱う、実験的な非LLM動的状態・記憶モデル。 |
 | [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) | 言語・推論・Coding AIを扱うprovider-neutralなMCP gateway。 |
 | [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) | 画像・動画・音楽・音声と関連media workflowを扱うprovider-neutralな生成MCP。 |
 
@@ -207,8 +214,9 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
         │                │                │
         ▼                ▼                ▼
    🎨 制作アプリ      🎛️ Studio       🤖 AI
- 2D / Cutwork       Studio / Client   Agent
- Kachinco                              Intelligence MCP
+ 2D / Cutwork       Studio / Client   Agent / AI Runtime
+ Kachinco                              Oblivionis
+                                      Intelligence MCP
                                       Generation MCP
         │                │                │
         └────────────────┼────────────────┘
@@ -231,6 +239,8 @@ AI/runtime側は、マシン名ではなく**責任範囲（authority）**で分
 - 🧪 [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) — generative-mediaのworkflow・job・provider・asset。
 - 🧠 [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) — provider-neutralな言語・推論・Coding gateway。
 - 🌱 [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) — 永続Agent stateとbounded Agent MCP surface。
+- ⚙️ [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) — model-adjacentな推論・Workflow実行、Job、割り込み、Capability、structured runtime event。
+- 🌘 [Oblivionis](https://github.com/flamoris-jp/Oblivionis) — 実験的な非LLM動的状態・記憶モデル。FLAMORIS AI Runtimeから呼び出せる一方、意図的に独立したモデルidentityを保つ。
 - 🎛️ [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) — マルチユーザーのWeb creative control plane。
 - 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation / routing。
 - 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutralなローカルGPU/runtime lifecycle authority。
