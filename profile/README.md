@@ -37,7 +37,7 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
 |---|---|
 | [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) | Persistent FLAMORIS-aware Agent with conversations, memory, knowledge, prompts, and tools. |
 | [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) | Model-adjacent execution runtime for inference, workflows, jobs, interrupts, capabilities, and real-time traces. |
-| [Oblivionis](https://github.com/flamoris-jp/Oblivionis) | Experimental non-LLM dynamic state and memory model built around oscillation, forgetting, association, recall, and evolving internal state. |
+| [Oblivionis](https://github.com/flamoris-jp/Oblivionis) | Experimental non-LLM model exploring experience-dependent AI behavior through oscillatory firing and runtime modulation, with forgetting and associative recall. |
 | [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) | Provider-neutral MCP gateway for language, reasoning, and coding AI. |
 | [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) | Provider-neutral generative-media gateway for image, video, music, voice, and related media workflows. |
 
@@ -96,10 +96,12 @@ The current non-desktop AI/runtime side is split by authority rather than by mac
 - 🧠 [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) — provider-neutral language, reasoning, and coding gateway.
 - 🌱 [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) — persistent Agent state and bounded Agent MCP surface.
 - ⚙️ [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) — model-adjacent inference/workflow execution, jobs, interrupts, capabilities, and structured runtime events.
-- 🌘 [Oblivionis](https://github.com/flamoris-jp/Oblivionis) — experimental non-LLM dynamic state and memory model; intentionally keeps an independent model identity while remaining callable from FLAMORIS AI Runtime.
+- 🌘 [Oblivionis](https://github.com/flamoris-jp/Oblivionis): experimental non-LLM state/memory model whose history-shaped firing is intended to supply runtime fluctuation; it retains an independent model identity rather than becoming an Agent or Workflow engine.
 - 🎛️ [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) — multi-user web creative control plane.
 - 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation and routing.
 - 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutral local GPU/runtime lifecycle authority.
+
+Oblivionis explores **experience → changing state → firing → runtime modulation → changed behavior**. Using a response to modulate execution is distinct from using it to start new work. These are planned integration boundaries: AI Runtime retains execution authority, and Profundumis handles latent association/recall rather than ordinary firing. See the [AI ecosystem map](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ai-ecosystem.md) and the [Oblivionis model concept](https://github.com/flamoris-jp/Oblivionis/blob/main/docs/MODEL.md).
 
 Machine names such as **LIME** are deployment identities, not public service identities.
 
@@ -181,7 +183,7 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
 |---|---|
 | [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) | Conversation・Memory・Knowledge・Prompt・Toolを持つ永続的なFLAMORIS Agent。 |
 | [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) | 推論・Workflow・Job・割り込み・Capability・リアルタイム観測を同じ実行層で扱うmodel-adjacent AI Runtime。 |
-| [Oblivionis](https://github.com/flamoris-jp/Oblivionis) | 振動・忘却・連想・想起と時間変化する内部状態を扱う、実験的な非LLM動的状態・記憶モデル。 |
+| [Oblivionis](https://github.com/flamoris-jp/Oblivionis) | 経験で変わる振動状態の発火からRuntimeへ揺らぎを与え、AIの振る舞いを変えることを目指す、忘却・連想・想起を持つ実験的な非LLMモデル。 |
 | [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) | 言語・推論・Coding AIを扱うprovider-neutralなMCP gateway。 |
 | [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) | 画像・動画・音楽・音声と関連media workflowを扱うprovider-neutralな生成MCP。 |
 
@@ -240,10 +242,12 @@ AI/runtime側は、マシン名ではなく**責任範囲（authority）**で分
 - 🧠 [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) — provider-neutralな言語・推論・Coding gateway。
 - 🌱 [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) — 永続Agent stateとbounded Agent MCP surface。
 - ⚙️ [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) — model-adjacentな推論・Workflow実行、Job、割り込み、Capability、structured runtime event。
-- 🌘 [Oblivionis](https://github.com/flamoris-jp/Oblivionis) — 実験的な非LLM動的状態・記憶モデル。FLAMORIS AI Runtimeから呼び出せる一方、意図的に独立したモデルidentityを保つ。
+- 🌘 [Oblivionis](https://github.com/flamoris-jp/Oblivionis): 経験で変わる発火をRuntimeの揺らぎへつなぐことを目指す、実験的な非LLM状態・記憶モデル。AgentやWorkflow engineにはせず、独立したモデルidentityを保つ。
 - 🎛️ [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) — マルチユーザーのWeb creative control plane。
 - 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation / routing。
 - 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutralなローカルGPU/runtime lifecycle authority。
+
+Oblivionisの狙いは、**経験 → 状態変化 → 発火 → Runtimeへの揺らぎ → 振る舞いの変化**。発火を実行中の振る舞いへ作用させることと、新しい処理を始めるトリガにすることは分けます。連携は構想段階で、実行のauthorityはAI Runtime側、深淵からの連想・想起はProfundumis側です。詳細は [AI全体地図](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ai-ecosystem.md) と [Oblivionisのモデル概念](https://github.com/flamoris-jp/Oblivionis/blob/main/docs/MODEL.md) を参照してください。
 
 **LIME**のようなマシン名はdeployment identityであり、公開サービスのidentityではありません。
 
