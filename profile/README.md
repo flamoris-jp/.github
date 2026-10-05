@@ -41,8 +41,8 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
 | [Arbitrium](https://github.com/flamoris-jp/Arbitrium) | First Maidionis Decision specialization for bounded advisory judgments over supplied evidence. |
 | [Oblivionis](https://github.com/flamoris-jp/Oblivionis) | Experimental non-LLM model exploring experience-dependent AI behavior through oscillatory firing and runtime modulation, with forgetting and associative recall. |
 | [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) | Shared non-MCP provider adapters for language, reasoning, and coding, with an optional external MCP facade. |
-| [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) | Bounded image, speech, and music generation/transcription, provider recipes, jobs, and assets, with an external MCP adapter. |
-| [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller) | Future shared generation-domain boundary. Documentation only; unimplemented. |
+| [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) | External MCP facade for the shared Generation Controller, with protocol validation, provenance ingress and content mapping. |
+| [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller) | Implemented MCP-free generation core: provider recipes, jobs, inputs and assets, with authenticated internal HTTP. |
 
 ### 🔌 Runtime & MCP
 
@@ -84,7 +84,7 @@ The current non-desktop AI/runtime side is split by authority rather than by mac
 - 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation and routing.
 - 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutral local GPU/runtime lifecycle authority.
 
-MCP Hub aggregates external entry points such as ChatGPT. Studio raw Intelligence and Agent execution use the shared provider adapters directly; Studio Agent Support uses Agent JSON HTTP. Studio generation retains an MCP compatibility route while Controller is unimplemented. `ComfyWorkFlow` means a ComfyUI graph/API-format JSON executed by ComfyUI; Runtime owns `ExecuteFlow` and its compiled `ExecutionPlan`. See the [current AI architecture](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md).
+MCP Hub aggregates external entry points such as ChatGPT. Studio raw Intelligence and Agent execution use the shared provider adapters directly; Studio Agent Support uses Agent JSON HTTP. Studio generation uses authenticated Controller HTTP; Generation MCP and Studio share one Controller authority. Accepted source and pending live rollout are tracked in [AI progress](https://github.com/flamoris-jp/flamoris-ai/blob/main/PROGRESS.md). `ComfyWorkFlow` means a ComfyUI graph/API-format JSON executed by ComfyUI; Runtime owns `ExecuteFlow` and its compiled `ExecutionPlan`. See the [current AI architecture](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md).
 
 Maidionis separates reusable specialization machinery from specialization semantics: Maidionis owns specialization-neutral model/training/evaluation/artifact contracts, while Arbitrium owns Decision-specific semantics and research evidence. AI Runtime remains the execution/orchestration authority around those models.
 
@@ -174,8 +174,8 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
 | [Arbitrium](https://github.com/flamoris-jp/Arbitrium) | Maidionis最初のDecision specialization。与えられたevidenceに対するboundedな助言判断を担当。 |
 | [Oblivionis](https://github.com/flamoris-jp/Oblivionis) | 経験で変わる振動状態の発火からRuntimeへ揺らぎを与え、AIの振る舞いを変えることを目指す、忘却・連想・想起を持つ実験的な非LLMモデル。 |
 | [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) | 言語・推論・Codingの非MCP provider adapterと、任意の外部MCP facadeを持つ共通package。 |
-| [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) | 保持された画像・音声・音楽生成／採譜、provider recipe・job・assetと外部MCP adapterを持つpackage。 |
-| [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller) | 将来の共通generation領域の境界。現在は文書のみで未実装。 |
+| [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) | 共通Generation Controllerの外部MCP facade。protocol検証・provenance ingress・content mappingを担当。 |
+| [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller) | 実装済みの非MCP生成core。provider recipe・job・input・assetと認証付き内部HTTPを担当。 |
 
 ### 🔌 Runtime・MCP基盤
 
@@ -217,7 +217,7 @@ AI/runtime側は、マシン名ではなく**責任範囲（authority）**で分
 - 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation / routing。
 - 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutralなローカルGPU/runtime lifecycle authority。
 
-MCP HubはChatGPTなどの外部入口を集約します。Studioのraw IntelligenceとAgent内部の実行は共通provider adapterへ直接接続し、StudioのAgent SupportはAgent JSON HTTPを使います。StudioのGenerationには、Controller未実装のためMCP互換経路が残っています。`ComfyWorkFlow` はComfyUIが実行するグラフ・API-format JSON、`ExecuteFlow` とコンパイル済み `ExecutionPlan` はRuntimeの責務です。詳細は [現行AI architecture](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md) を参照してください。
+MCP HubはChatGPTなどの外部入口を集約します。Studioのraw IntelligenceとAgent内部の実行は共通provider adapterへ直接接続し、StudioのAgent SupportはAgent JSON HTTPを使います。StudioのGenerationは認証付きController HTTPを使い、Generation MCPと同じController authorityへ接続します。ソース受け入れと未完了の実機反映は [AI進捗](https://github.com/flamoris-jp/flamoris-ai/blob/main/PROGRESS.md) に記録します。`ComfyWorkFlow` はComfyUIが実行するグラフ・API-format JSON、`ExecuteFlow` とコンパイル済み `ExecutionPlan` はRuntimeの責務です。詳細は [現行AI architecture](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md) を参照してください。
 
 Maidionisはspecialization共通のmodel/training/evaluation/artifact contractを持ち、ArbitriumはDecision固有のsemanticsと研究証跡を持ちます。これらを実行・合成するauthorityはAI Runtime側に残します。
 
