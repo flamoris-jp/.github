@@ -12,6 +12,21 @@ We build tools where humans and AI can work in the same creative space, while ke
 - 🤖 **AI & generation** — generative media, AI agents, intelligence gateways, and creative automation.
 - 🔌 **Shared infrastructure** — MCP, logging, Studio, runtime coordination, and the small pieces that keep everything talking to everything else.
 
+## 🚀 Start here
+
+**I just want to make an MV!** 🎬 FLAMORIS grew from that creative goal into a set of tools for making and connecting media. You do not have to understand every repository to get started.
+
+| I want to… | Explore | Where to start |
+|---|---|---|
+| 🎬 **CREATE** a music video | 2D animation, cutout artwork, video editing | [2D](https://github.com/flamoris-jp/flamoris-2D) · [Cutwork](https://github.com/flamoris-jp/flamoris-cutwork) · [Kachinco](https://github.com/flamoris-jp/flamoris-kachinco) |
+| ✨ **GENERATE** creative materials | Studio workspace, image/audio generation, language intelligence | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
+| 🔌 **CONNECT** humans and AI | Agent conversations, external MCP access, tool routing | [AI Agent](https://github.com/flamoris-jp/flamoris-ai-agent) · [Generation MCP](https://github.com/flamoris-jp/flamoris-generation-mcp) · [MCP Hub](https://github.com/flamoris-jp/flamoris-mcp-hub) |
+| ⚙️ **OPERATE** the environment | Runtime lifecycle, managed updates, observability | [GPU Node Manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) · [Updater](https://github.com/flamoris-jp/flamoris-updater) · [Observer](https://github.com/flamoris-jp/flamoris-observer) |
+
+**New to FLAMORIS?** Start with the creative applications or Studio. Building an integration? Follow the AI/MCP repositories. Looking for technical boundaries? Read the [AI architecture](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md) and the repository map below.
+
+> The map describes roles, not installation readiness. Features, release maturity and live acceptance vary by project; each repository's own README is authoritative.
+
 ## 🗺️ Repository map
 
 FLAMORIS is a small ecosystem rather than one giant application. Each repository has a deliberately bounded role.
@@ -144,6 +159,21 @@ FLAMORISでは、イラスト、アニメーション、映像、生成AI、AI�
 - 🎨 **制作アプリ** — 2Dアニメーション、画像の切り抜き・修復、動画編集、コンポジット、制作ツール。
 - 🤖 **AI・生成系** — 画像・動画・音楽・音声などの生成、AIエージェント、知能系ゲートウェイ、制作自動化。
 - 🔌 **共通基盤** — MCP、Logging、Studio、runtime連携、そして全部をつなぐ小さな仕組みたち。
+
+## 🚀 はじめての方へ
+
+**「MVを作りたい！」** 🎬 その思いから、FLAMORISは制作アプリとAI、そして両者をつなぐ仕組みへ広がりました。最初から全リポジトリを理解する必要はありません。
+
+| やりたいこと | できること | 入口 |
+|---|---|---|
+| 🎬 **CREATE** 作品を作る | 2Dアニメ、画像のパーツ編集、動画編集 | [2D](https://github.com/flamoris-jp/flamoris-2D) · [Cutwork](https://github.com/flamoris-jp/flamoris-cutwork) · [Kachinco](https://github.com/flamoris-jp/flamoris-kachinco) |
+| ✨ **GENERATE** 素材を生み出す | Studio、画像・音声などの生成、知能機能 | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
+| 🔌 **CONNECT** AIとつなぐ | エージェントとの対話、MCP公開、ツール連携 | [AI Agent](https://github.com/flamoris-jp/flamoris-ai-agent) · [Generation MCP](https://github.com/flamoris-jp/flamoris-generation-mcp) · [MCP Hub](https://github.com/flamoris-jp/flamoris-mcp-hub) |
+| ⚙️ **OPERATE** 環境を支える | GPUランタイム管理、更新、観測 | [GPU Node Manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) · [Updater](https://github.com/flamoris-jp/flamoris-updater) · [Observer](https://github.com/flamoris-jp/flamoris-observer) |
+
+**制作したい人**は制作アプリやStudioから。**AI連携を作りたい人**はAgentやMCPへ。全体の仕組みを知りたい人は[AIアーキテクチャ](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md)と下のリポジトリ地図をどうぞ。
+
+> この案内は各リポジトリの役割を示すもので、インストール可能・実機検証済みを保証するものではありません。成熟度や対応機能は各リポジトリのREADMEを確認してください。
 
 ## 🗺️ Repository Map
 
