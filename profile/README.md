@@ -1,5 +1,7 @@
 # FLAMORIS
 
+![FLAMORIS: I JUST WANT TO MAKE AN MV](flamoris-jp.png)
+
 **Creative tools for humans and AI with too many ideas.** 🥸
 
 FLAMORIS is an open-source creative ecosystem spanning illustration, animation, video, generative media, AI agents, and the infrastructure that connects them.
