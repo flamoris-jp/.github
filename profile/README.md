@@ -80,6 +80,7 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
 
 | Repository | Role |
 |---|---|
+| [flamoris-updater](https://github.com/flamoris-jp/flamoris-updater) | Standalone Web, CLI and MCP service for installing and updating repository-owned apps while retaining settings and data. |
 | [flamoris-ai](https://github.com/flamoris-jp/flamoris-ai) | Architecture boundaries and roadmap coordination for FLAMORIS AI. |
 | [.github](https://github.com/flamoris-jp/.github) | Organization profile and shared GitHub configuration. |
 
@@ -89,8 +90,8 @@ This map describes repository responsibilities and explicitly marked future scop
 
 The current non-desktop AI/runtime side is split by authority rather than by machine name:
 
-- 🧪 [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) — bounded generation requests/recipes, provider execution, jobs, inputs, and assets; domain code and the external MCP adapter currently share this package.
-- 🧭 [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller) — a future common non-MCP generation contract; documentation only, with design and implementation held.
+- 🧪 [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) — external MCP facade and host of the shared Controller runtime and internal HTTP adapter.
+- 🧭 [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller) — implemented MCP-free generation core owning provider recipes, jobs, inputs and assets.
 - 🧠 [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) — shared provider adapters in `flamoris_intelligence`, plus the optional external MCP facade.
 - 🌱 [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) — optional personality, conversations, memory, and principal/session policy; internal JSON HTTP and a separate external Agent MCP surface.
 - ⚙️ [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) — inference and ExecuteFlow, compiled ExecutionPlan, jobs, interrupts, resources, and structured runtime events.
@@ -100,6 +101,7 @@ The current non-desktop AI/runtime side is split by authority rather than by mac
 - 🎛️ [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) — multi-user web creative control plane.
 - 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation and routing.
 - 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutral local GPU/runtime lifecycle authority.
+- 📦 [flamoris-updater](https://github.com/flamoris-jp/flamoris-updater) — repository-owned application installation, managed updates and settings/data retention; its [initial installation](https://github.com/flamoris-jp/flamoris-updater/blob/main/docs/DISTRIBUTION.md) and [self-update](https://github.com/flamoris-jp/flamoris-updater/blob/main/docs/SELF_UPDATE.md) guides are separate.
 
 MCP Hub aggregates external entry points such as ChatGPT. Studio raw Intelligence and Agent execution use the shared provider adapters directly; Studio Agent Support uses Agent JSON HTTP. Studio generation uses authenticated Controller HTTP; Generation MCP and Studio share one Controller authority. Accepted source and pending live rollout are tracked in [AI progress](https://github.com/flamoris-jp/flamoris-ai/blob/main/PROGRESS.md). `ComfyWorkFlow` means a ComfyUI graph/API-format JSON executed by ComfyUI; Runtime owns `ExecuteFlow` and its compiled `ExecutionPlan`. See the [current AI architecture](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md).
 
@@ -119,7 +121,7 @@ _Status is synchronized automatically from the `development_status` organization
 | Status | Repositories |
 |---|---|
 | `stable` | [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager), [flamoris-logging](https://github.com/flamoris-jp/flamoris-logging), [flamoris-mcp-core](https://github.com/flamoris-jp/flamoris-mcp-core) |
-| `development` | [Arbitrium](https://github.com/flamoris-jp/Arbitrium), [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D), [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent), [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime), [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork), [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp), [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp), [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco), [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub), [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio), [Maidionis](https://github.com/flamoris-jp/Maidionis), [Oblivionis](https://github.com/flamoris-jp/Oblivionis) |
+| `development` | [Arbitrium](https://github.com/flamoris-jp/Arbitrium), [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D), [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent), [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime), [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork), [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller), [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp), [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp), [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco), [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub), [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio), [flamoris-updater](https://github.com/flamoris-jp/flamoris-updater), [Maidionis](https://github.com/flamoris-jp/Maidionis), [Oblivionis](https://github.com/flamoris-jp/Oblivionis) |
 | `planned` | [flamoris-studio-client](https://github.com/flamoris-jp/flamoris-studio-client) |
 | `meta` | [.github](https://github.com/flamoris-jp/.github), [flamoris-ai](https://github.com/flamoris-jp/flamoris-ai), [flamoris-commons](https://github.com/flamoris-jp/flamoris-commons) |
 <!-- development-status:end -->
@@ -228,6 +230,7 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
 
 | Repository | 役割 |
 |---|---|
+| [flamoris-updater](https://github.com/flamoris-jp/flamoris-updater) | 各リポジトリのアプリを導入・更新し、設定とデータを引き継ぐ独立したWeb・CLI・MCPサービス。 |
 | [flamoris-ai](https://github.com/flamoris-jp/flamoris-ai) | FLAMORIS AI全体のarchitecture境界とroadmapを整理する管制塔。 |
 | [.github](https://github.com/flamoris-jp/.github) | Organization profileと共通GitHub設定。 |
 
@@ -237,8 +240,8 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
 
 AI/runtime側は、マシン名ではなく**責任範囲（authority）**で分けています。
 
-- 🧪 [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) — 保持されたgeneration request/recipe、provider実行、job・input・asset。現状はdomain実装と外部MCP adapterが同じpackageに共存。
-- 🧭 [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller) — 将来の共通非MCP generation契約。文書のみで、具体設計・実装は保留。
+- 🧪 [flamoris-generation-mcp](https://github.com/flamoris-jp/flamoris-generation-mcp) — 外部MCP facade。共通Controller runtimeと内部HTTP adapterをhostingする。
+- 🧭 [flamoris-generation-controller](https://github.com/flamoris-jp/flamoris-generation-controller) — 実装済みの非MCP生成core。provider recipe・job・input・assetを所有する。
 - 🧠 [flamoris-intelligence-mcp](https://github.com/flamoris-jp/flamoris-intelligence-mcp) — `flamoris_intelligence` の共通provider adapterと、任意の外部MCP facade。
 - 🌱 [flamoris-ai-agent](https://github.com/flamoris-jp/flamoris-ai-agent) — 任意の人格・Conversation・Memory・principal/session方針。内部JSON HTTPと、別の外部Agent MCP入口。
 - ⚙️ [flamoris-ai-runtime](https://github.com/flamoris-jp/flamoris-ai-runtime) — 推論・ExecuteFlow・コンパイル済みExecutionPlan・Job・割り込み・リソース・structured runtime event。
@@ -248,6 +251,7 @@ AI/runtime側は、マシン名ではなく**責任範囲（authority）**で分
 - 🎛️ [flamoris-studio](https://github.com/flamoris-jp/flamoris-studio) — マルチユーザーのWeb creative control plane。
 - 🔀 [flamoris-mcp-hub](https://github.com/flamoris-jp/flamoris-mcp-hub) — namespaced MCP aggregation / routing。
 - 🖥️ [flamoris-gpu-node-manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) — provider-neutralなローカルGPU/runtime lifecycle authority。
+- 📦 [flamoris-updater](https://github.com/flamoris-jp/flamoris-updater) — 各Repositoryのアプリ導入・更新と設定／データの引継ぎを担当。[初回インストール](https://github.com/flamoris-jp/flamoris-updater/blob/main/docs/DISTRIBUTION.md)と[自己更新](https://github.com/flamoris-jp/flamoris-updater/blob/main/docs/SELF_UPDATE.md)を分けて案内。
 
 MCP HubはChatGPTなどの外部入口を集約します。Studioのraw IntelligenceとAgent内部の実行は共通provider adapterへ直接接続し、StudioのAgent SupportはAgent JSON HTTPを使います。StudioのGenerationは認証付きController HTTPを使い、Generation MCPと同じController authorityへ接続します。ソース受け入れと未完了の実機反映は [AI進捗](https://github.com/flamoris-jp/flamoris-ai/blob/main/PROGRESS.md) に記録します。`ComfyWorkFlow` はComfyUIが実行するグラフ・API-format JSON、`ExecuteFlow` とコンパイル済み `ExecutionPlan` はRuntimeの責務です。詳細は [現行AI architecture](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md) を参照してください。
 
@@ -281,3 +285,4 @@ FLAMORISは元気になって育ちます。🌱
 
 > ソフトウェアコード以外の、キャラクター、イラスト、音楽、映像などの  
 > **アーティスト FLAMORISの制作物**は、Apache License 2.0の対象とは限りません。
+
