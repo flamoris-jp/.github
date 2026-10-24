@@ -24,7 +24,7 @@ We build tools where humans and AI can work in the same creative space, while ke
 | ✨ **GENERATE** creative materials | Studio workspace, image/audio generation, language intelligence | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
 | 🔌 **CONNECT** humans and AI | Agent conversations, external MCP access, tool routing | [AI Agent](https://github.com/flamoris-jp/flamoris-ai-agent) · [Generation MCP](https://github.com/flamoris-jp/flamoris-generation-mcp) · [MCP Hub](https://github.com/flamoris-jp/flamoris-mcp-hub) |
 | ⚙️ **OPERATE** the environment | Runtime lifecycle, managed updates, observability | [GPU Node Manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) · [Updater](https://github.com/flamoris-jp/flamoris-updater) · [Observer](https://github.com/flamoris-jp/flamoris-observer) |
-| 🔎 **OBSERVE** Windows screens | Approved windows, selected regions, monitors, screenshot/video | [Capture (planned)](https://github.com/flamoris-jp/flamoris-capture) |
+| 🔎 **OBSERVE** Windows screens | One approved window, screenshots, bounded recording and opt-in operation traces | [Capture](https://github.com/flamoris-jp/flamoris-capture) |
 
 **New to FLAMORIS?** Start with the creative applications or Studio. Building an integration? Follow the AI/MCP repositories. Looking for technical boundaries? Read the [AI architecture](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md) and the repository map below.
 
@@ -42,11 +42,11 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
 | [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork) | Fast cutout, masking, repair, and part editing for 2D artwork. |
 | [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | AI-native video editor with timeline editing, effects, compositing, and MCP editing tools. |
 
-### 🔎 Windows screen observation (planned)
+### 🔎 Windows screen observation
 
 | Repository | Role |
 |---|---|
-| [flamoris-capture](https://github.com/flamoris-jp/flamoris-capture) | Planned standalone Windows screen capture EXE, reusable DLL, and MCP observation adapter for selected windows, regions, and monitors. Screenshots, short video, and optional interaction traces are **not implemented yet**. |
+| [flamoris-capture](https://github.com/flamoris-jp/flamoris-capture) | Standalone Windows EXE, reusable capture DLL and MCP adapter for one approved window: screenshots, bounded recording, selected frames/contact sheets and opt-in operation traces. Cutwork and 2D can embed owner-window observation. Basic Windows/Hub workflow confirmed; broader lifecycle/platform acceptance remains pending. Region/monitor capture is future scope. |
 
 This captures what appeared on a user's screen; it does not replace application-specific project/document MCP, or infrastructure [Observer](https://github.com/flamoris-jp/flamoris-observer).
 
@@ -183,7 +183,7 @@ FLAMORISでは、イラスト、アニメーション、映像、生成AI、AI�
 | ✨ **GENERATE** 素材を生み出す | Studio、画像・音声などの生成、知能機能 | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
 | 🔌 **CONNECT** AIとつなぐ | エージェントとの対話、MCP公開、ツール連携 | [AI Agent](https://github.com/flamoris-jp/flamoris-ai-agent) · [Generation MCP](https://github.com/flamoris-jp/flamoris-generation-mcp) · [MCP Hub](https://github.com/flamoris-jp/flamoris-mcp-hub) |
 | ⚙️ **OPERATE** 環境を支える | GPUランタイム管理、更新、観測 | [GPU Node Manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) · [Updater](https://github.com/flamoris-jp/flamoris-updater) · [Observer](https://github.com/flamoris-jp/flamoris-observer) |
-| 🔎 **OBSERVE** 画面を観測する | 許可されたWindow・矩形範囲・モニターの静止画/動画 | [Capture（計画中）](https://github.com/flamoris-jp/flamoris-capture) |
+| 🔎 **OBSERVE** 画面を観測する | 許可した1ウィンドウの静止画・録画・選択フレーム・操作記録 | [Capture](https://github.com/flamoris-jp/flamoris-capture) |
 
 **制作したい人**は制作アプリやStudioから。**AI連携を作りたい人**はAgentやMCPへ。全体の仕組みを知りたい人は[AIアーキテクチャ](https://github.com/flamoris-jp/flamoris-ai/blob/main/docs/ARCHITECTURE.md)と下のリポジトリ地図をどうぞ。
 
@@ -201,11 +201,11 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
 | [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork) | 2D原画の切り抜き・マスク・修復・パーツ編集を高速に行うツール。 |
 | [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | タイムライン編集・エフェクト・コンポジット・MCP編集ツールを扱うAIネイティブ動画編集ツール。 |
 
-### 🔎 Windows画面観測（計画中）
+### 🔎 Windows画面観測
 
 | Repository | 役割 |
 |---|---|
-| [flamoris-capture](https://github.com/flamoris-jp/flamoris-capture) | ユーザーが許可したウィンドウ・矩形範囲・モニターを静止画/短時間動画で観測する、独立Windows EXE＋再利用可能DLL＋MCP adapter（**開発計画段階、未実装**）。操作イベント同期記録も将来構想。 |
+| [flamoris-capture](https://github.com/flamoris-jp/flamoris-capture) | 許可した1ウィンドウの静止画、上限付き録画、選択フレーム・コンタクトシート、任意の操作記録を扱う独立Windows EXE＋再利用可能DLL＋MCP adapter。Cutwork・2Dへの自アプリ画面観測の組込みも実装。基本Windows/Hub動作は確認済みで、失効・OS/GPU等の追加実機受入は継続中。矩形・モニター撮影は将来機能。 |
 
 実画面の表示を観測する共通ツールで、各アプリのDocument/Timeline MCPやサーバー監視の[Observer](https://github.com/flamoris-jp/flamoris-observer)は置き換えません。
 
