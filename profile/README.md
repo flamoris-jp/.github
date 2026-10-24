@@ -21,6 +21,7 @@ We build tools where humans and AI can work in the same creative space, while ke
 | I want to… | Explore | Where to start |
 |---|---|---|
 | 🎬 **CREATE** a music video | 2D animation, cutout artwork, video editing | [2D](https://github.com/flamoris-jp/flamoris-2D) · [Cutwork](https://github.com/flamoris-jp/flamoris-cutwork) · [Kachinco](https://github.com/flamoris-jp/flamoris-kachinco) |
+| 🎞️ **AUTOMATE** video editing on Linux | Headless timeline editing, frame preview and sequence export through CLI/MCP | [Kachinco CLI](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md) |
 | ✨ **GENERATE** creative materials | Studio workspace, image/audio generation, language intelligence | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
 | 🔌 **CONNECT** humans and AI | Agent conversations, external MCP access, tool routing | [AI Agent](https://github.com/flamoris-jp/flamoris-ai-agent) · [Generation MCP](https://github.com/flamoris-jp/flamoris-generation-mcp) · [MCP Hub](https://github.com/flamoris-jp/flamoris-mcp-hub) |
 | ⚙️ **OPERATE** the environment | Runtime lifecycle, managed updates, observability | [GPU Node Manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) · [Updater](https://github.com/flamoris-jp/flamoris-updater) · [Observer](https://github.com/flamoris-jp/flamoris-observer) |
@@ -40,7 +41,7 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
 |---|---|
 | [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D) | AI-native 2D animation editor for character motion and MV production. |
 | [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork) | Fast cutout, masking, repair, and part editing for 2D artwork. |
-| [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | AI-native video editor with timeline editing, effects, compositing, and MCP editing tools. |
+| [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | AI-native video editing and compositing through a Windows desktop app or Linux headless CLI/MCP, sharing one native editing/rendering engine. [Linux CLI guide](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md). |
 
 ### 🔎 Windows screen observation
 
