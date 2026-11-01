@@ -21,6 +21,8 @@ We build tools where humans and AI can work in the same creative space, while ke
 | I want to… | Explore | Where to start |
 |---|---|---|
 | 🎬 **CREATE** a music video | 2D animation, cutout artwork, video editing | [2D](https://github.com/flamoris-jp/flamoris-2D) · [Cutwork](https://github.com/flamoris-jp/flamoris-cutwork) · [Kachinco](https://github.com/flamoris-jp/flamoris-kachinco) |
+| 🎞️ **AUTOMATE** video editing on Linux | Headless timeline editing, frame preview and sequence export through CLI/MCP | [Kachinco CLI](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md) |
+| 🧪 **EXPERIMENT** with lettering and CG | Song-specific vector lettering (offline MVP) and script-driven object animation (early Blender lab) | [Glyph](https://github.com/flamoris-jp/flamoris-glyph) · [CG](https://github.com/flamoris-jp/flamoris-CG) |
 | ✨ **GENERATE** creative materials | Studio workspace, image/audio generation, language intelligence | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
 | 🔌 **CONNECT** humans and AI | Agent conversations, external MCP access, tool routing | [AI Agent](https://github.com/flamoris-jp/flamoris-ai-agent) · [Generation MCP](https://github.com/flamoris-jp/flamoris-generation-mcp) · [MCP Hub](https://github.com/flamoris-jp/flamoris-mcp-hub) |
 | ⚙️ **OPERATE** the environment | Runtime lifecycle, managed updates, observability | [GPU Node Manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) · [Updater](https://github.com/flamoris-jp/flamoris-updater) · [Observer](https://github.com/flamoris-jp/flamoris-observer) |
@@ -40,7 +42,16 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
 |---|---|
 | [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D) | AI-native 2D animation editor for character motion and MV production. |
 | [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork) | Fast cutout, masking, repair, and part editing for 2D artwork. |
-| [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | AI-native video editor with timeline editing, effects, compositing, and MCP editing tools. |
+| [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | AI-native video editing with timeline editing, effects, compositing and MCP tools through a Windows desktop app or Linux headless CLI/MCP, sharing one native editing/rendering engine. [Linux CLI guide](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md). |
+
+### 🧪 Lettering & CG research
+
+| Repository | Role and current stage |
+|---|---|
+| [flamoris-glyph](https://github.com/flamoris-jp/flamoris-glyph) | Song-specific vector lettering: occurrences of the same character can have different shapes within a shared Style DNA. **Offline MVP (0.2)**: Windows/Linux Python library and CLI turn lyrics/SRT into outline SVG + JSON bundles. AI design proposals, MCP exposure and KineticTypo import/playback are not yet implemented. Glyph owns letterforms; KineticTypo owns layout, motion and timeline rendering. |
+| [flamoris-CG](https://github.com/flamoris-jp/flamoris-CG) | Script-driven object animation and CG clip research. **Early Blender laboratory**, not an independent lightweight CG engine: Linux headless still-preview generation and retrieval of saved preview images through MCP have been verified. Blender executes scene construction and rendering; full modeling, rigid-body physics, finished-video encoding and automatic Kachinco handoff remain future work. |
+
+**Paused concept — [flamoris-cinema](https://github.com/flamoris-jp/flamoris-cinema):** dormant since **2026-10-31**. Its future role is whole-work direction and project orchestration, distinct from CG's material clips. Existing experimental code and results are preserved; new implementation, experiments and roadmap progression are stopped. It is not an active production tool. See the [vision and pause decision](https://github.com/flamoris-jp/flamoris-cinema/blob/main/docs/vision-and-pause.md).
 
 ### 🔎 Windows screen observation
 
@@ -180,6 +191,8 @@ FLAMORISでは、イラスト、アニメーション、映像、生成AI、AI�
 | やりたいこと | できること | 入口 |
 |---|---|---|
 | 🎬 **CREATE** 作品を作る | 2Dアニメ、画像のパーツ編集、動画編集 | [2D](https://github.com/flamoris-jp/flamoris-2D) · [Cutwork](https://github.com/flamoris-jp/flamoris-cutwork) · [Kachinco](https://github.com/flamoris-jp/flamoris-kachinco) |
+| 🎞️ **AUTOMATE** Linuxで動画編集を自動化する | CLI/MCPでのヘッドレス編集、フレームプレビュー、シーケンス書き出し | [Kachinco CLI](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md) |
+| 🧪 **EXPERIMENT** 文字とCGを実験する | 楽曲専用ベクターレタリング（オフラインMVP）、スクリプトによる物体アニメーション（初期Blender実験） | [Glyph](https://github.com/flamoris-jp/flamoris-glyph) · [CG](https://github.com/flamoris-jp/flamoris-CG) |
 | ✨ **GENERATE** 素材を生み出す | Studio、画像・音声などの生成、知能機能 | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
 | 🔌 **CONNECT** AIとつなぐ | エージェントとの対話、MCP公開、ツール連携 | [AI Agent](https://github.com/flamoris-jp/flamoris-ai-agent) · [Generation MCP](https://github.com/flamoris-jp/flamoris-generation-mcp) · [MCP Hub](https://github.com/flamoris-jp/flamoris-mcp-hub) |
 | ⚙️ **OPERATE** 環境を支える | GPUランタイム管理、更新、観測 | [GPU Node Manager](https://github.com/flamoris-jp/flamoris-gpu-node-manager) · [Updater](https://github.com/flamoris-jp/flamoris-updater) · [Observer](https://github.com/flamoris-jp/flamoris-observer) |
@@ -199,7 +212,16 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
 |---|---|
 | [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D) | キャラクターモーションやMV制作のためのAIネイティブ2Dアニメーションエディタ。 |
 | [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork) | 2D原画の切り抜き・マスク・修復・パーツ編集を高速に行うツール。 |
-| [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | タイムライン編集・エフェクト・コンポジット・MCP編集ツールを扱うAIネイティブ動画編集ツール。 |
+| [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | WindowsデスクトップとLinuxヘッドレスCLI/MCPで同じネイティブ編集・描画エンジンを共有し、タイムライン編集・エフェクト・コンポジット・MCP編集ツールを扱うAIネイティブ動画編集ツール。[Linux CLIガイド](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md)。 |
+
+### 🧪 レタリング・CG研究
+
+| Repository | 役割と現在の段階 |
+|---|---|
+| [flamoris-glyph](https://github.com/flamoris-jp/flamoris-glyph) | 共通のStyle DNAの中で、同じ文字も出現箇所ごとに形を変えられる楽曲専用ベクターレタリング。**オフラインMVP（0.2）**として、Windows/LinuxのPythonライブラリ・CLIで歌詞/SRTから輪郭SVG＋JSON bundleを生成。AIデザイン提案・MCP公開・KineticTypoでの読込と再生は未実装。Glyphは字形、KineticTypoは配置・動き・タイムライン描画を担当。 |
+| [flamoris-CG](https://github.com/flamoris-jp/flamoris-CG) | スクリプトによるオブジェクトアニメーションとCG素材クリップ制作の研究。現在は**初期Blender実験基盤**で、独立した軽量CGエンジンではない。Linux headlessでの静止プレビュー生成と保存済みプレビューのMCP画像取得を実機確認済み。シーン構築・描画の実行主体はBlender。本格モデリング・剛体物理・完成映像のエンコード・Kachincoへの自動受け渡しは今後の範囲。 |
+
+**休眠中の構想 — [flamoris-cinema](https://github.com/flamoris-jp/flamoris-cinema)：** **2026-10-31から休眠中**。将来の役割は作品全体の演出・プロジェクト統括で、素材クリップを作るCGとは区別する。既存の実験コード・成果を保存し、新規実装・実験・ロードマップの進行は停止中。稼働中の制作製品としては扱わない。[構想と休眠の判断](https://github.com/flamoris-jp/flamoris-cinema/blob/main/docs/vision-and-pause.md)を参照。
 
 ### 🔎 Windows画面観測
 
