@@ -10,7 +10,7 @@ We build tools where humans and AI can work in the same creative space, while ke
 
 ## What we build
 
-- 🎨 **Creative applications** — 2D animation, image decomposition and repair, video editing, compositing, and production tools.
+- 🎨 **Creative applications** — 2D animation, image decomposition and repair, video editing, compositing, MIDI composition/editing, and production tools.
 - 🤖 **AI & generation** — generative media, AI agents, intelligence gateways, and creative automation.
 - 🔌 **Shared infrastructure** — MCP, logging, Studio, runtime coordination, and the small pieces that keep everything talking to everything else.
 
@@ -21,6 +21,7 @@ We build tools where humans and AI can work in the same creative space, while ke
 | I want to… | Explore | Where to start |
 |---|---|---|
 | 🎬 **CREATE** a music video | 2D animation, cutout artwork, video editing | [2D](https://github.com/flamoris-jp/flamoris-2D) · [Cutwork](https://github.com/flamoris-jp/flamoris-cutwork) · [Kachinco](https://github.com/flamoris-jp/flamoris-kachinco) |
+| 🎹 **COMPOSE** editable music | Headless MIDI editing, project persistence and offline SoundFont WAV rendering; public v0.1.0 preview | [Cantabile](https://github.com/flamoris-jp/flamoris-cantabile) |
 | 🎞️ **AUTOMATE** video editing on Linux | Headless timeline editing, frame preview and sequence export through CLI/MCP | [Kachinco CLI](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md) |
 | 🧪 **EXPERIMENT** with lettering and CG | Song-specific vector lettering (offline MVP) and script-driven object animation (early Blender lab) | [Glyph](https://github.com/flamoris-jp/flamoris-glyph) · [CG](https://github.com/flamoris-jp/flamoris-CG) |
 | ✨ **GENERATE** creative materials | Studio workspace, image/audio generation, language intelligence | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
@@ -43,6 +44,7 @@ FLAMORIS is a small ecosystem rather than one giant application. Each repository
 | [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D) | AI-native 2D animation editor for character motion and MV production. |
 | [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork) | Fast cutout, masking, repair, and part editing for 2D artwork. |
 | [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | AI-native video editing with timeline editing, effects, compositing and MCP tools through a Windows desktop app or Linux headless CLI/MCP, sharing one native editing/rendering engine. [Linux CLI guide](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md). |
+| [flamoris-cantabile](https://github.com/flamoris-jp/flamoris-cantabile) | Headless MIDI composition/editing and offline FluidSynth WAV rendering through CLI/MCP, sharing a C++20 engine with the future Windows GUI. **Public v0.1.0 preview**: 18 MCP tools, project save/reopen, MIDI/WAV retrieval and bounded Linux Docker/Updater/Hub acceptance; human playback confirmed. VST 3, Windows GUI and model listening remain pending. |
 
 ### 🧪 Lettering & CG research
 
@@ -180,7 +182,7 @@ FLAMORISでは、イラスト、アニメーション、映像、生成AI、AI�
 
 ## つくっているもの
 
-- 🎨 **制作アプリ** — 2Dアニメーション、画像の切り抜き・修復、動画編集、コンポジット、制作ツール。
+- 🎨 **制作アプリ** — 2Dアニメーション、画像の切り抜き・修復、動画編集、コンポジット、MIDI作曲・編集、制作ツール。
 - 🤖 **AI・生成系** — 画像・動画・音楽・音声などの生成、AIエージェント、知能系ゲートウェイ、制作自動化。
 - 🔌 **共通基盤** — MCP、Logging、Studio、runtime連携、そして全部をつなぐ小さな仕組みたち。
 
@@ -191,6 +193,7 @@ FLAMORISでは、イラスト、アニメーション、映像、生成AI、AI�
 | やりたいこと | できること | 入口 |
 |---|---|---|
 | 🎬 **CREATE** 作品を作る | 2Dアニメ、画像のパーツ編集、動画編集 | [2D](https://github.com/flamoris-jp/flamoris-2D) · [Cutwork](https://github.com/flamoris-jp/flamoris-cutwork) · [Kachinco](https://github.com/flamoris-jp/flamoris-kachinco) |
+| 🎹 **COMPOSE** 編集できる音楽を作る | ヘッドレスMIDI編集、プロジェクト保存、SoundFontによるWAV書き出し。公開プレビュー v0.1.0 | [Cantabile](https://github.com/flamoris-jp/flamoris-cantabile) |
 | 🎞️ **AUTOMATE** Linuxで動画編集を自動化する | CLI/MCPでのヘッドレス編集、フレームプレビュー、シーケンス書き出し | [Kachinco CLI](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md) |
 | 🧪 **EXPERIMENT** 文字とCGを実験する | 楽曲専用ベクターレタリング（オフラインMVP）、スクリプトによる物体アニメーション（初期Blender実験） | [Glyph](https://github.com/flamoris-jp/flamoris-glyph) · [CG](https://github.com/flamoris-jp/flamoris-CG) |
 | ✨ **GENERATE** 素材を生み出す | Studio、画像・音声などの生成、知能機能 | [Studio](https://github.com/flamoris-jp/flamoris-studio) · [Generation Controller](https://github.com/flamoris-jp/flamoris-generation-controller) · [Intelligence](https://github.com/flamoris-jp/flamoris-intelligence-mcp) |
@@ -213,6 +216,7 @@ FLAMORISは、ひとつの巨大アプリではなく、役割ごとに分かれ
 | [flamoris-2D](https://github.com/flamoris-jp/flamoris-2D) | キャラクターモーションやMV制作のためのAIネイティブ2Dアニメーションエディタ。 |
 | [flamoris-cutwork](https://github.com/flamoris-jp/flamoris-cutwork) | 2D原画の切り抜き・マスク・修復・パーツ編集を高速に行うツール。 |
 | [flamoris-kachinco](https://github.com/flamoris-jp/flamoris-kachinco) | WindowsデスクトップとLinuxヘッドレスCLI/MCPで同じネイティブ編集・描画エンジンを共有し、タイムライン編集・エフェクト・コンポジット・MCP編集ツールを扱うAIネイティブ動画編集ツール。[Linux CLIガイド](https://github.com/flamoris-jp/flamoris-kachinco/blob/main/docs/linux-cli.md)。 |
+| [flamoris-cantabile](https://github.com/flamoris-jp/flamoris-cantabile) | CLI/MCPで音符・トラックを組み立てるヘッドレスMIDI作曲・編集と、FluidSynthによるWAV書き出し。将来のWindows GUIも同じC++20エンジンを使用。**公開プレビュー v0.1.0**：18ツール、保存・再読込、MIDI/WAV取得、Linux Docker/Updater/Hubの限定した実機受入と人による試聴を確認済み。VST 3・Windows GUI・AI自身の聴取は今後の範囲。 |
 
 ### 🧪 レタリング・CG研究
 
