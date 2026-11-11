@@ -12,6 +12,8 @@ Unless stated otherwise, code contributions are submitted under the Apache Licen
 
 Do not add third-party code, AI models, model weights, datasets, fonts, images, audio, video, or other assets unless their licenses are compatible and clearly documented.
 
+Research/production repositories must not contain audio/video files, including original/generated demos and test samples. Store the bytes outside Git and commit references, SHA-256 digests and analysis metadata. Licensing review does not waive this rule; Git LFS, archives, renaming and encoding are not exceptions. See [the shared storage policy](https://github.com/flamoris-jp/flamoris-commons/blob/main/docs/repository-policy.md#121-audio-and-video-storage).
+
 FLAMORIS does not provide guaranteed individual support. Please use the repository documentation, Issues, tests, logs, and source code as primary references. AI-assisted self-support is encouraged.
 
 ---
@@ -29,5 +31,7 @@ AIを使ったコントリビューションも歓迎します。提出する変
 明記がない限り、コードへのコントリビューションはApache License 2.0の条件で提供されます。
 
 第三者のコード、AIモデル、weights、データセット、フォント、画像、音声、動画などを追加する場合は、互換性のあるライセンスであることを確認し、そのライセンスを明示してください。
+
+研究・制作リポジトリへの音声・動画実体のコミットは禁止です。自作・生成デモ・テストサンプルも含みます。実体はGitの外に保存し、参照先・SHA-256・解析結果を記録してください。ライセンス確認やGit LFS・圧縮・改名・エンコードによる例外は設けません。詳細は[共通保存方針](https://github.com/flamoris-jp/flamoris-commons/blob/main/docs/repository-policy.md#121-audio-and-video-storage)を参照してください。
 
 FLAMORISは個別サポートを保証しません。README、ドキュメント、Issue、テスト、ログ、ソースコードを主な参照先として使ってください。AIによる自己サポートも歓迎します。
